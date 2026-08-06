@@ -50,29 +50,25 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-yovo-red flex items-center justify-center text-white font-bold text-xs">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+          <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+            <div className="w-6 h-6 rounded-full bg-yovo-red flex items-center justify-center text-white font-bold text-xs shrink-0">
               Y
             </div>
-            <span className="text-slate-300 font-semibold">YovoTrip © {new Date().getFullYear()}</span>
-            <span>— Intelligent travel planning with optimized routes.</span>
+            <span className="text-slate-200 font-semibold">YovoTrip © {new Date().getFullYear()}</span>
+            <span className="hidden sm:inline text-slate-500">— Intelligent travel planning with optimized routes.</span>
           </div>
 
-          <div className="flex items-center gap-1">
-            <span>Crafted with</span>
-            <Heart size={13} className="text-yovo-red fill-yovo-red" />
-            <span>
-              for Frontend Developer Assessment by{' '}
-              <a
-                href="https://jassiportfolio.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white font-extrabold hover:text-yovo-red underline decoration-yovo-red underline-offset-4 transition-colors cursor-pointer"
-              >
-                Jassi Parihar
-              </a>
-            </span>
+          <div className="text-center sm:text-right text-xs text-slate-400 font-medium">
+            Crafted with <Heart size={13} className="inline text-yovo-red fill-yovo-red mx-0.5 -mt-0.5" /> for Frontend Developer Assessment by{' '}
+            <a
+              href="https://jassiportfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-extrabold hover:text-yovo-red underline decoration-yovo-red underline-offset-4 transition-colors cursor-pointer whitespace-nowrap"
+            >
+              Jassi Parihar
+            </a>
           </div>
         </div>
 
