@@ -1,0 +1,62 @@
+[
+  {
+    "code": "DEL",
+    "city": "New Delhi",
+    "name": "Indira Gandhi International Airport",
+    "country": "India"
+  },
+  {
+    "code": "MAA",
+    "city": "Chennai",
+    "name": "Chennai International Airport",
+    "country": "India"
+  },
+  {
+    "code": "BOM",
+    "city": "Mumbai",
+    "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "country": "India"
+  },
+  {
+    "code": "BLR",
+    "city": "Bengaluru",
+    "name": "Kempegowda International Airport",
+    "country": "India"
+  },
+  {
+    "code": "HYD",
+    "city": "Hyderabad",
+    "name": "Rajiv Gandhi International Airport",
+    "country": "India"
+  },
+  {
+    "code": "CCU",
+    "city": "Kolkata",
+    "name": "Netaji Subhash Chandra Bose International Airport",
+    "country": "India"
+  },
+  {
+    "code": "GOI",
+    "city": "Goa",
+    "name": "Dabolim / Manohar International Airport",
+    "country": "India"
+  },
+  {
+    "code": "DXB",
+    "city": "Dubai",
+    "name": "Dubai International Airport",
+    "country": "United Arab Emirates"
+  },
+  {
+    "code": "SIN",
+    "city": "Singapore",
+    "name": "Changi Airport",
+    "country": "Singapore"
+  },
+  {
+    "code": "LHR",
+    "city": "London",
+    "name": "Heathrow Airport",
+    "country": "United Kingdom"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "code": "YOVOAI",
+    "description": "Exclusive Yovo AI discount! Get 12% off up to ₹1,500 on all flights.",
+    "discountType": "percentage",
+    "discountValue": 12,
+    "maxDiscount": 1500,
+    "minBookingValue": 3500
+  },
+  {
+    "code": "WELCOME500",
+    "description": "Flat ₹500 off on your first flight booking with YovoTrip.",
+    "discountType": "fixed",
+    "discountValue": 500,
+    "maxDiscount": 500,
+    "minBookingValue": 2500
+  },
+  {
+    "code": "SUPERFLIGHT",
+    "description": "15% off on round-trip & premium economy bookings.",
+    "discountType": "percentage",
+    "discountValue": 15,
+    "maxDiscount": 2000,
+    "minBookingValue": 5000
+  },
+  {
+    "code": "STUDENTPRO",
+    "description": "Extra ₹600 off for verified student travelers.",
+    "discountType": "fixed",
+    "discountValue": 600,
+    "maxDiscount": 600,
+    "minBookingValue": 3000
+  }
+]

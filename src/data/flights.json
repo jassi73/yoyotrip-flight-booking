@@ -1,0 +1,373 @@
+[
+  {
+    "id": "FL-6E2041",
+    "airline": {
+      "id": "indigo",
+      "name": "IndiGo",
+      "code": "6E",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "6E 2041",
+    "origin": {
+      "code": "DEL",
+      "city": "New Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "MAA",
+      "city": "Chennai",
+      "name": "Chennai International Airport",
+      "country": "India"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:00",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": 0,
+    "price": 8451,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 8451,
+        "taxes": 1120,
+        "baggageCheckIn": "15 kg (1 piece)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 3000,
+        "dateChangeFee": 2500,
+        "refundable": true,
+        "seatsLeft": 6
+      },
+      {
+        "type": "Premium Economy",
+        "basePrice": 10999,
+        "taxes": 1250,
+        "baggageCheckIn": "25 kg (2 pieces)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 1500,
+        "dateChangeFee": 1000,
+        "refundable": true,
+        "seatsLeft": 4
+      },
+      {
+        "type": "Business",
+        "basePrice": 21500,
+        "taxes": 2400,
+        "baggageCheckIn": "35 kg (2 pieces)",
+        "baggageCabin": "10 kg (1 piece)",
+        "cancellationFee": 0,
+        "dateChangeFee": 0,
+        "refundable": true,
+        "seatsLeft": 2
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Cheapest", "Non-stop", "Yovo's pick", "Cheap but sensible"],
+    "terminalDeparture": "T3",
+    "terminalArrival": "T1"
+  },
+  {
+    "id": "FL-AI803",
+    "airline": {
+      "id": "airindia",
+      "name": "Air India",
+      "code": "AI",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "AI 803",
+    "origin": {
+      "code": "DEL",
+      "city": "New Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "MAA",
+      "city": "Chennai",
+      "name": "Chennai International Airport",
+      "country": "India"
+    },
+    "departureTime": "08:40",
+    "arrivalTime": "11:20",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": 0,
+    "price": 8920,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 8920,
+        "taxes": 1150,
+        "baggageCheckIn": "20 kg (1 piece)",
+        "baggageCabin": "8 kg (1 piece)",
+        "cancellationFee": 2800,
+        "dateChangeFee": 2200,
+        "refundable": true,
+        "seatsLeft": 9
+      },
+      {
+        "type": "Premium Economy",
+        "basePrice": 12400,
+        "taxes": 1400,
+        "baggageCheckIn": "30 kg (2 pieces)",
+        "baggageCabin": "10 kg (1 piece)",
+        "cancellationFee": 1200,
+        "dateChangeFee": 800,
+        "refundable": true,
+        "seatsLeft": 5
+      },
+      {
+        "type": "Business",
+        "basePrice": 24900,
+        "taxes": 2800,
+        "baggageCheckIn": "40 kg (2 pieces)",
+        "baggageCabin": "12 kg (1 piece)",
+        "cancellationFee": 0,
+        "dateChangeFee": 0,
+        "refundable": true,
+        "seatsLeft": 3
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Fastest", "Free meals", "Non-stop"],
+    "terminalDeparture": "T3",
+    "terminalArrival": "T4"
+  },
+  {
+    "id": "FL-UK819",
+    "airline": {
+      "id": "vistara",
+      "name": "Vistara",
+      "code": "UK",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "UK 819",
+    "origin": {
+      "code": "DEL",
+      "city": "New Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "MAA",
+      "city": "Chennai",
+      "name": "Chennai International Airport",
+      "country": "India"
+    },
+    "departureTime": "14:15",
+    "arrivalTime": "17:05",
+    "duration": "2h 50m",
+    "durationMinutes": 170,
+    "stops": 0,
+    "price": 9450,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 9450,
+        "taxes": 1200,
+        "baggageCheckIn": "15 kg (1 piece)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 3000,
+        "dateChangeFee": 2000,
+        "refundable": true,
+        "seatsLeft": 12
+      },
+      {
+        "type": "Premium Economy",
+        "basePrice": 13900,
+        "taxes": 1500,
+        "baggageCheckIn": "25 kg (2 pieces)",
+        "baggageCabin": "10 kg (1 piece)",
+        "cancellationFee": 1000,
+        "dateChangeFee": 500,
+        "refundable": true,
+        "seatsLeft": 4
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Reach at a good time", "Free meals", "Non-stop"],
+    "terminalDeparture": "T3",
+    "terminalArrival": "T1"
+  },
+  {
+    "id": "FL-QP1301",
+    "airline": {
+      "id": "akasa",
+      "name": "Akasa Air",
+      "code": "QP",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "QP 1301",
+    "origin": {
+      "code": "DEL",
+      "city": "New Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "MAA",
+      "city": "Chennai",
+      "name": "Chennai International Airport",
+      "country": "India"
+    },
+    "departureTime": "17:30",
+    "arrivalTime": "20:20",
+    "duration": "2h 50m",
+    "durationMinutes": 170,
+    "stops": 0,
+    "price": 8290,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 8290,
+        "taxes": 1050,
+        "baggageCheckIn": "15 kg (1 piece)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 3500,
+        "dateChangeFee": 3000,
+        "refundable": false,
+        "seatsLeft": 3
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Cheapest", "Easy trip"],
+    "terminalDeparture": "T2",
+    "terminalArrival": "T1"
+  },
+  {
+    "id": "FL-SG402",
+    "airline": {
+      "id": "spicejet",
+      "name": "SpiceJet",
+      "code": "SG",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "SG 402",
+    "origin": {
+      "code": "DEL",
+      "city": "New Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "MAA",
+      "city": "Chennai",
+      "name": "Chennai International Airport",
+      "country": "India"
+    },
+    "departureTime": "11:10",
+    "arrivalTime": "16:45",
+    "duration": "5h 35m",
+    "durationMinutes": 335,
+    "stops": 1,
+    "stopDetails": ["1h 20m layover in BOM (Mumbai)"],
+    "price": 7950,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 7950,
+        "taxes": 980,
+        "baggageCheckIn": "15 kg (1 piece)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 3500,
+        "dateChangeFee": 3000,
+        "refundable": true,
+        "seatsLeft": 15
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Cheap but sensible", "1 Stop"],
+    "terminalDeparture": "T1",
+    "terminalArrival": "T1"
+  },
+  {
+    "id": "FL-6E5312",
+    "airline": {
+      "id": "indigo",
+      "name": "IndiGo",
+      "code": "6E",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "6E 5312",
+    "origin": {
+      "code": "DEL",
+      "city": "New Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International Airport",
+      "country": "India"
+    },
+    "departureTime": "07:00",
+    "arrivalTime": "09:10",
+    "duration": "2h 10m",
+    "durationMinutes": 130,
+    "stops": 0,
+    "price": 5400,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 5400,
+        "taxes": 850,
+        "baggageCheckIn": "15 kg (1 piece)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 2800,
+        "dateChangeFee": 2000,
+        "refundable": true,
+        "seatsLeft": 8
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Cheapest", "Non-stop", "Yovo's pick"],
+    "terminalDeparture": "T3",
+    "terminalArrival": "T2"
+  },
+  {
+    "id": "FL-UK945",
+    "airline": {
+      "id": "vistara",
+      "name": "Vistara",
+      "code": "UK",
+      "logo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=80&q=80"
+    },
+    "flightNumber": "UK 945",
+    "origin": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International Airport",
+      "country": "India"
+    },
+    "destination": {
+      "code": "BLR",
+      "city": "Bengaluru",
+      "name": "Kempegowda International Airport",
+      "country": "India"
+    },
+    "departureTime": "19:40",
+    "arrivalTime": "21:25",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": 0,
+    "price": 4890,
+    "fareOptions": [
+      {
+        "type": "Economy",
+        "basePrice": 4890,
+        "taxes": 750,
+        "baggageCheckIn": "15 kg (1 piece)",
+        "baggageCabin": "7 kg (1 piece)",
+        "cancellationFee": 2500,
+        "dateChangeFee": 1800,
+        "refundable": true,
+        "seatsLeft": 10
+      }
+    ],
+    "datesAvailable": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12"],
+    "tags": ["Fastest", "Non-stop", "Free meals"],
+    "terminalDeparture": "T2",
+    "terminalArrival": "T2"
+  }
+]
