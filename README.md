@@ -1,134 +1,136 @@
-# YovoTrip - Frontend Developer Assessment Solution
+# YovoTrip - Flight Booking Experience
 
-An intelligent, modern, and production-grade Flight Booking Experience built for **YovoTrip** using **React 18**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Context API**.
+An intelligent, modern, and production-grade 3-screen Flight Booking Web Application built for **YovoTrip** using **React 18**, **TypeScript**, **Vite**, **Tailwind CSS**, and **React Context API**.
 
-This project delivers an elevated, premium version of the YovoTrip platform, preserving its distinct crimson brand identity while enhancing visual hierarchy, information density, micro-interactions, responsive form controls, and overall user experience.
+This project implements a complete end-to-end flight booking flow with a strong focus on task-first UX, zero-fee transparency, custom popover controls (no native `<select>` menus), dynamic accordion traveler forms, and real-time form validation.
 
 ---
 
-## 🚀 Live Features
+## 🌟 Key Highlights & Design Innovations
 
-### 1. Flight Search Screen (`/`)
-- **YovoTrip Crimson Hero**: Custom crimson header overlay with subtle aviation background patterns.
-- **Interactive Trip Type Selector**: Switch between `One-way`, `Round Trip`, and `Multi City` with active tab styling and a "Best fares guaranteed" badge.
-- **Smart Airport Selection**: Airport autocomplete selector for Origin and Destination with a one-click Swap button.
-- **Date & Traveler Selector**: Flexible date selection and custom popover dropdown for Adults (12+), Children (2-11), Infants (<2), and Cabin Class (`Economy`, `Premium Economy`, `Business`).
-- **Special Fare Discounts Bar**: Instant fare tag options (`Regular`, `Student`, `Armed Forces`, `Senior Citizen`) with live discount badges.
-- **Yovo AI Travel Assistant**: Interactive AI prompt guide ("Hey, It's Yovo, your AI travel guide. How can I help you today?") with sample query chips.
-- **Popular Routes**: Highlighting top domestic routes with live price indicators.
+1. **Zero Native Select Dropdowns (100% Custom Popovers)**:
+   - All dropdowns across Search, Results, and Passenger pages (airports, dates, passenger counts, cabin class, titles, seat preferences, meal choices, and sort options) use custom animated popover controls styled in YovoTrip's primary crimson theme.
 
-### 2. Flight Results Screen (`/results`)
-- **Sticky Search Summary Header**: Allows users to inspect and modify search parameters without navigating back.
-- **Interactive Day Price Carousel**: Scrollable date navigation bar showcasing daily price indicators (e.g. Wed 5th Aug ₹8.4k, Thu 6th Aug ₹7.9k).
-- **Yovo AI "Help Me Choose" Chips**: One-tap smart filters (`Yovo's pick`, `Cheap but sensible`, `Is fastest worth it?`, `Avoid overnight`, `Non-stop`, `Free meals`).
+2. **Connecting Flight Layover Tooltip**:
+   - Anchored directly to 1-stop badge triggers with exact segment breakdown, airline emblem badges (`IX`, `6E`, `UK`, `AI`), layover durations, and transfer airports.
+
+3. **Dynamic Accordion Passenger Forms & Live Add/Remove Travelers**:
+   - Passenger 1 (Primary) is open by default, while secondary passengers start collapsed in expandable accordion cards.
+   - Users can dynamically add adults/children (`+ Add Adult`, `+ Add Child`) or remove travelers (`Trash2` icon) with live fare breakdown updates.
+
+4. **Flying Airplane Sky Loading Animation**:
+   - Custom full-screen night sky loader (`bg-slate-950`) featuring an ascending Yovo Crimson airplane, thrust jet stream trail, passing clouds, and flight search progress bar.
+
+5. **Instant Route Protection Guard (`<Navigate to="/" replace />`)**:
+   - Directly opening `/passenger` or `/confirmation` without selecting a flight or completing booking instantly redirects back to `/` with zero screen flicker.
+
+6. **Bonus LocalStorage Persistence**:
+   - Selected search parameters, chosen flight, fare option, and confirmed booking state persist in `localStorage` across page refreshes.
+
+---
+
+## 🚀 Screen-by-Screen User Flow
+
+### Screen 1: Flight Search (`/`)
+- **Task-Oriented Hero Section**: Quick search form above the fold with 9 Indian airports (`DEL`, `BOM`, `BLR`, `MAA`, `HYD`, `CCU`, `GOI`, `PNQ`, `JDH`).
+- **Interactive Trip Type Selector**: Switch between `One-way`, `Round Trip`, and `Multi City` with animated Yovo Crimson "Coming Soon" popovers.
+- **Airport Autocomplete**: Custom input-triggered destination search with thumbnail cards (Mehrangarh Fort, Umaid Bhawan Palace, Jodhpur, etc.) and quick airport swap button (`⇄`).
+- **Date & Traveler Selector**: Custom popover calendars preventing past dates (`minDate={today}`), and traveler counter for Adults, Children, and Infants.
+- **Special Fare Discounts Bar**: Instant discount chips (`Regular`, `Student`, `Armed Forces`, `Senior Citizen`).
+- **Yovo AI Travel Assistant**: Interactive AI prompt guide with sample query chips.
+
+### Screen 2: Flight Results (`/results`)
+- **Sticky Search Modification Header**: Sticky subheader bar (`top-16`) allowing instant search tweaking without leaving the page.
+- **Date Price Carousel**: Daily fare navigation bar displaying lowest prices across adjacent travel dates.
 - **Sticky Filter Sidebar**:
   - Price Range slider (up to ₹50,000).
-  - Stops filter checkboxes (Non Stop, 1 Stop, 2+ Stops).
-  - Airlines filter checkboxes (IndiGo, Air India, Vistara, Akasa Air, SpiceJet).
+  - Stops filter (Non Stop, 1 Stop, 2+ Stops).
+  - Airlines filter (IndiGo, Air India, Vistara, Akasa Air, SpiceJet).
   - One-click filter reset.
-- **Sort Controls**: Quick sort tabs (`Cheapest`, `Fastest`, `Relevance`, `Earliest Departure`).
-- **Flight Card & Visual Timeline**: Clear timeline showing departure time/terminal, flight duration, stops, layover info, and arrival time/terminal.
-- **Expandable Fare Tier Modal**: Compare Economy, Premium Economy, and Business tiers with detailed baggage rules and cancellation policies.
+- **Custom Sort Popover**: Quick sort options (`Cheapest`, `Fastest`, `Duration`, `Earliest Departure`, `Earliest Arrival`, `Yovo AI`).
+- **Flight Card Timeline & Layover Tooltip**: Clear information hierarchy, airline emblem box, flight duration timeline, layover popovers, amenities pills, and ₹0 convenience fee notice.
 
-### 3. Passenger Details Screen (`/passenger`)
-- **Protected Navigation**: Automatically redirects back to search if accessed without selecting a flight.
-- **Dynamic Traveler Forms**: Dedicated forms for every passenger (Salutation, First & Last Name, DOB, Seat & Meal preferences).
-- **Contact Details**: Email and phone validation.
-- **Live Form Validation**: Accessible error states with real-time feedback.
-- **Promo Coupon System**: Apply coupons like `YOVOAI` (12% off) or `WELCOME500` (₹500 off) with instant price breakdown updates.
-- **Special Fare Notice**: Guidance on student/defense/senior ID verification.
-- **Journey & Fare Breakdown Sidebar**: Base fare, taxes, promotional ₹0 convenience fee savings, special fare discounts, coupon savings, and total payable amount.
+### Screen 3a: Passenger Details (`/passenger`)
+- **Top Navigation Bar**: Uncluttered subheader (`sticky top-16 z-40`) with `← Back to Flight Results` button and SSL security badge.
+- **Accordion Passenger Forms**: First traveler open by default; secondary travelers collapsed in summary accordion cards with auto-expand error handling.
+- **Contact Details**: Email and phone number validation with real-time and out-of-focus (`onBlur`) error clearance.
+- **Coupon System**: Apply promotional coupons (e.g. `YOVOAI` for 12% off) with live price updates.
+- **Sticky Price Breakdown Sidebar**: Sticky fare summary (`top-32`) detailing Base Fare, Taxes, ₹0 Convenience Fee savings, Coupon discounts, and total payable amount.
 
-### 4. Booking Confirmation Screen (`/confirmation`)
-- **Protected Navigation**: Redirects to search if no confirmed booking exists.
-- **Confirmation Header**: Generated PNR reference (e.g. `YV-98A7F2`) with one-click copy and Booking ID.
-- **Printable E-Ticket**: Premium boarding pass layout with barcode & QR code graphic, passenger manifest, seat assignments, terminal information, and baggage allowance.
-- **Action Toolbar**: Print E-Ticket, Download PDF, Email Receipt, and Book Another Flight buttons.
-- **LocalStorage Persistence**: Session data and confirmed bookings persist across page reloads.
+### Screen 3b: Booking Confirmation (`/confirmation`)
+- **Generated Mock PNR**: Unique 6-character alphanumeric PNR reference (e.g. `YV7K8M`) with one-click copy.
+- **Printable E-Ticket**: Boarding pass e-ticket card with barcode, QR code graphic, passenger manifest, seat assignments, terminal info, and baggage allowance.
+- **Action Buttons**: Print E-Ticket, Download PDF, Email Receipt, and Book Another Flight buttons.
 
 ---
 
 ## 🛠️ Tech Stack & Architecture
 
-- **Core**: React 18 (Functional Components + Hooks)
-- **Language**: TypeScript (Strict type checking, interfaces for all domain entities)
+- **Framework**: React 18 (Functional Components + Hooks)
+- **Language**: TypeScript (Strict typing for Flights, Airfares, Passengers, Bookings, & Filters)
 - **Build Tool**: Vite
-- **Routing**: React Router v6 (Lazy loading & Protected Route flow)
-- **Styling**: Tailwind CSS + Custom YovoTrip theme tokens (`#D81B43` primary crimson, sleek dark elements, soft neutral cards)
-- **State Management**: React Context API (`FlightContext`, `BookingContext`) with LocalStorage sync
+- **Routing**: React Router v6 (Lazy loading & `<Navigate />` route guards)
+- **Styling**: Tailwind CSS + Custom YovoTrip brand tokens (`#D81B43` primary crimson, slate dark modes, HSL Hues)
+- **Animation**: Framer Motion
+- **State Management**: React Context API (`FlightContext`, `BookingContext`) with `localStorage` sync
 - **Icons**: Lucide React
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Folder Structure
 
+```text
+YoyoTrip/
+├── public/                       # Static assets & favicon
+├── src/
+│   ├── components/               # Modular UI Components
+│   │   ├── common/               # Shared UI Controls (CustomSelectDropdown, PassengerDatePicker, Skeleton, Input, Modal, Badge)
+│   │   ├── confirmation/         # Booking Header, TicketCard, QrCodeGraphic, ConfirmationActions
+│   │   ├── layout/               # Header & Footer (Unmounted on workspace routes)
+│   │   ├── passenger/            # PassengerForm, ContactDetailsForm, CouponSection, PriceSummarySidebar, SpecialFareAlert
+│   │   ├── results/              # FlightCard, LayoverTooltip, FlightTimeline, DateCarousel, FilterSidebar, SortTabs, StickySearchHeader
+│   │   └── search/               # SearchForm, AirportSelectDropdown, DatePickerDropdown, TravelerDropdown, TripTypeTabs, HeroSection
+│   ├── constants/                # Default search parameters & constant config
+│   ├── context/                  # FlightContext & BookingContext state providers
+│   ├── data/                     # Mock JSON data (airports.json, flights.json, coupons.json)
+│   ├── hooks/                    # Custom hooks (useDebounce, useToast)
+│   ├── pages/                    # SearchPage, ResultsPage, PassengerPage, ConfirmationPage, NotFoundPage
+│   ├── routes/                   # AppRoutes (React.lazy + Suspense code splitting)
+│   ├── services/                 # flightService, bookingService, storageService
+│   ├── styles/                   # index.css (Tailwind directives & custom scrollbars)
+│   ├── types/                    # TypeScript domain interfaces (flight, booking, passenger, search, filter, coupon)
+│   └── utils/                    # currency, dateUtils, priceUtils, validation
+├── index.html                    # Root HTML document
+├── package.json                  # Project dependencies & scripts
+├── tailwind.config.js            # YovoTrip Crimson & Slate Theme Extensions
+└── tsconfig.json                 # TypeScript configuration
 ```
-src/
-├── assets/             # Static assets & images
-├── components/
-│   ├── common/         # Button, Input, Select, Modal, Badge, Skeleton, Toast
-│   ├── layout/         # Header, Footer, Navbar
-│   ├── search/         # SearchForm, TripTypeTabs, SpecialFareSelector, TravelerDropdown, AiTravelGuide, PopularRoutes
-│   ├── results/        # FlightCard, FlightTimeline, DateCarousel, FilterSidebar, SortTabs, AiSmartFilters, FareDetailsModal, StickySearchHeader
-│   ├── passenger/      # PassengerForm, ContactDetailsForm, CouponSection, PriceSummarySidebar, SpecialFareAlert
-│   └── confirmation/   # TicketCard, BookingHeader, QrCodeGraphic, ConfirmationActions
-├── context/            # FlightContext, BookingContext
-├── hooks/              # useBooking, useFlightSearch, useDebounce, useLocalStorage, useToast
-├── services/           # flightService, bookingService, storageService
-├── utils/              # currency, dateUtils, validation, priceUtils
-├── constants/          # airports, airlines, coupons, routes, fareRules
-├── types/              # flight, search, passenger, booking, filter, coupon
-├── data/               # airports.json, flights.json, coupons.json
-├── pages/              # SearchPage, ResultsPage, PassengerPage, ConfirmationPage, NotFoundPage
-├── routes/             # AppRoutes (React.lazy + Suspense code splitting)
-└── styles/             # index.css (Tailwind directives & print styles)
-```
 
 ---
 
-## ⚡ Performance Optimizations
+## ⚡ Setup & Execution Instructions
 
-1. **Route Code Splitting**: All pages (`SearchPage`, `ResultsPage`, `PassengerPage`, `ConfirmationPage`) are lazy-loaded via `React.lazy()` and `Suspense` to minimize initial bundle size.
-2. **Memoized Filtering & Calculations**: Flight search, filter evaluation, and fare breakdown calculations are memoized using `useMemo` and `useCallback`.
-3. **Optimized LocalStorage Persistence**: Light state snapshots ensure state restoration without blocking main thread loopers.
-4. **Clean Component Scoping**: All components strictly follow the <500 lines constraint for optimal readability and maintenance.
-
----
-
-## 🎯 Design Decisions & UX Enhancements
-
-- **Brand Consistency**: Preserved YovoTrip's signature crimson theme (`#D81B43`) and aviation motif.
-- **Card Hierarchy**: High contrast cards with soft shadows (`shadow-yovo-card`), clear font weights (Outfit & Inter fonts), and distinct color accents.
-- **Information Density**: Timelines present departure, duration, layover, and arrival times cleanly without cluttering the screen.
-- **Accessibility**: Inputs feature descriptive labels, field errors, clear focus rings, and proper keyboard accessibility.
-
----
-
-## 🚀 Setup & Execution
-
-### Prerequisites
+### 1. Prerequisites
 - Node.js (v18 or higher recommended)
 - npm or yarn
 
-### Installation
+### 2. Installation
 ```bash
 npm install
 ```
 
-### Start Development Server
+### 3. Start Development Server
 ```bash
 npm run dev
 ```
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
-### Build for Production
+### 4. Build for Production
 ```bash
 npm run build
 ```
 
 ---
 
-## 🔮 Future Improvements
-- Multi-city flight booking itinerary builder.
-- Seat map picker integration for interactive seat selection.
-- Real-time flight tracking & status updates simulation.
-- PDF generation library integration (e.g. `jspdf` / `html2pdf`).
+## 📬 Contact & Submissions
+Developed for the **YovoTrip Frontend Developer Assessment**.
