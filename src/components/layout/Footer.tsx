@@ -62,7 +62,17 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-1">
             <span>Crafted with</span>
             <Heart size={13} className="text-yovo-red fill-yovo-red" />
-            <span>for Frontend Developer Assessment.</span>
+            <span>
+              for Frontend Developer Assessment by{' '}
+              <a
+                href="https://jassiportfolio.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-extrabold hover:text-yovo-red underline decoration-yovo-red underline-offset-4 transition-colors cursor-pointer"
+              >
+                Jassi Parihar
+              </a>
+            </span>
           </div>
         </div>
 

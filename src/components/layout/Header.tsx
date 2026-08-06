@@ -121,15 +121,11 @@ export const Header: React.FC = () => {
             </span>
           </Link>
 
-          {/* Navigation Links - Height h-10 matching search bar */}
+          {/* Navigation Links - Height h-10 matching search bar (Find Flight selected by default) */}
           <nav className="hidden md:flex items-center gap-1 bg-slate-100/80 p-1 rounded-full border border-slate-200/60 h-10">
             <Link
               to="/"
-              className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold transition-all h-8 ${
-                location.pathname === '/' || location.pathname === '/results'
-                  ? 'bg-white text-yovo-red shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold transition-all h-8 bg-white text-yovo-red shadow-sm"
             >
               <Plane size={15} />
               <span>Find Flight</span>
