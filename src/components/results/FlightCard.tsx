@@ -50,41 +50,53 @@ export const FlightCard: React.FC<FlightCardProps> = ({ flight, showPromoHeader 
       }`}
     >
       
-      {/* Top Green Banner */}
+      {/* Top Promotional Banner */}
       {(showPromoHeader || flight.tags?.includes("Yovo's pick")) && (
-        <div className="bg-emerald-700 text-white text-xs font-bold py-1.5 px-4 flex items-center justify-center gap-2 rounded-t-3xl overflow-hidden">
-          <Percent size={14} />
+        <div className="bg-emerald-700 text-white text-[11px] sm:text-xs font-bold py-1.5 px-3 sm:px-4 flex items-center justify-center gap-1.5 rounded-t-3xl overflow-hidden text-center">
+          <Percent size={13} className="shrink-0" />
           <span>₹0 Convenience Fee on all Domestic flights</span>
         </div>
       )}
 
-      <div className="p-5 space-y-4">
+      <div className="p-4 sm:p-5 space-y-4">
         
-        {/* Main Content Grid: Airline + Departure/Timeline/Arrival + Price */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+        {/* Main Content Grid: Top Row (Airline + Price on mobile), Timeline, Desktop Price */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 items-center">
           
-          {/* Airline Logo & Name */}
-          <div className="lg:col-span-3 flex items-center gap-3">
-            <div className={`w-12 h-12 rounded-2xl ${style.bg} ${style.text} flex items-center justify-center font-black text-sm shadow-xs shrink-0`}>
-              <Plane size={20} className="rotate-45" />
+          {/* Airline Logo & Name + Mobile Price Header */}
+          <div className="lg:col-span-3 flex items-center justify-between sm:justify-start gap-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-2xl ${style.bg} ${style.text} flex items-center justify-center font-black text-sm shadow-xs shrink-0`}>
+                <Plane size={18} className="rotate-45" />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-base font-extrabold text-slate-900 leading-tight truncate">
+                  {flight.airline.name}
+                </h4>
+                <span className="text-[11px] sm:text-xs text-slate-400 font-bold block mt-0.5">
+                  {flight.flightNumber}
+                </span>
+              </div>
             </div>
-            <div>
-              <h4 className="text-base font-extrabold text-slate-900 leading-tight">
-                {flight.airline.name}
-              </h4>
-              <span className="text-xs text-slate-400 font-bold block mt-0.5">
-                {flight.flightNumber}
+
+            {/* Price Block (Visible ONLY on Mobile Screens) */}
+            <div className="lg:hidden text-right shrink-0">
+              <div className="text-xl font-black text-emerald-600 leading-none">
+                {formatCurrency(flight.price)}
+              </div>
+              <span className="text-[9px] text-slate-400 font-semibold block mt-0.5">
+                per adult
               </span>
             </div>
           </div>
 
-          {/* Departure, Duration Timeline, Arrival (Generous Col Span for Full Airport Names) */}
+          {/* Departure, Duration Timeline, Arrival */}
           <div className="lg:col-span-7">
             <FlightTimeline flight={flight} />
           </div>
 
-          {/* Right Price Block */}
-          <div className="lg:col-span-2 text-right">
+          {/* Right Price Block (Visible ONLY on Desktop Screens) */}
+          <div className="hidden lg:block lg:col-span-2 text-right">
             <div className="text-2xl font-black text-emerald-600 leading-none">
               {formatCurrency(flight.price)}
             </div>
@@ -102,44 +114,44 @@ export const FlightCard: React.FC<FlightCardProps> = ({ flight, showPromoHeader 
         {/* Divider */}
         <div className="border-t border-slate-100" />
 
-        {/* Bottom Amenities Pills + Select CTA Button */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        {/* Bottom Amenities Pills + Full-Width Mobile Select CTA Button */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
           
           {/* Amenities Pills */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 text-xs font-semibold">
-              <Briefcase size={13} className="text-yovo-red" />
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap text-[11px] sm:text-xs">
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 font-semibold">
+              <Briefcase size={12} className="text-yovo-red shrink-0" />
               <span>{defaultFare.baggageCabin || '7Kg Cabin'}</span>
             </span>
 
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 text-xs font-semibold">
-              <ShoppingBag size={13} className="text-yovo-red" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 font-semibold">
+              <ShoppingBag size={12} className="text-yovo-red shrink-0" />
               <span>{defaultFare.baggageCheckIn || '15Kg Checkin'}</span>
             </span>
 
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 text-xs font-semibold">
-              <Utensils size={13} className="text-yovo-red" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 font-semibold">
+              <Utensils size={12} className="text-yovo-red shrink-0" />
               <span>Chargeable Meals</span>
             </span>
 
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-semibold">
-              <RefreshCcw size={13} />
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 font-semibold">
+              <RefreshCcw size={12} className="shrink-0" />
               <span>{defaultFare.refundable ? 'Refundable' : 'Non-refundable'}</span>
             </span>
 
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 text-xs font-semibold">
-              <Calendar size={13} className="text-yovo-red" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-xl bg-pink-50/70 border border-pink-100 text-slate-700 font-semibold">
+              <Calendar size={12} className="text-yovo-red shrink-0" />
               <span>Date Change Allowed</span>
             </span>
           </div>
 
-          {/* Select CTA Button */}
+          {/* Select CTA Button (Full width on mobile for easy tapping) */}
           <button
             type="button"
             onClick={handleBookClick}
-            className="px-6 py-2.5 bg-yovo-slate hover:bg-yovo-navy text-white text-xs font-extrabold rounded-xl transition-colors flex items-center gap-2 shadow-sm shrink-0"
+            className="w-full sm:w-auto px-6 py-2.5 bg-yovo-slate hover:bg-yovo-navy text-white text-xs font-extrabold rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm shrink-0 cursor-pointer"
           >
-            <span>Select</span>
+            <span>Select Flight</span>
             <ArrowRight size={14} />
           </button>
 
