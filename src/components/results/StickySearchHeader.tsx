@@ -15,7 +15,7 @@ export const StickySearchHeader: React.FC = () => {
   const totalTravelers = searchParams.travelers.adults + searchParams.travelers.children + searchParams.travelers.infants;
 
   return (
-    <div className="bg-gradient-to-r from-yovo-red via-yovo-red to-yovo-red-dark text-white shadow-md sticky top-16 z-30 border-b border-pink-700/30">
+    <div className="bg-gradient-to-r from-yovo-red via-yovo-red to-yovo-red-dark text-white shadow-md sticky top-16 z-40 border-b border-pink-700/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
         {!isEditing ? (
           <div className="flex items-center justify-between gap-3 w-full">

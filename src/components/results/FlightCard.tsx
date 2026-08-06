@@ -46,7 +46,7 @@ export const FlightCard: React.FC<FlightCardProps> = ({ flight, showPromoHeader 
       onMouseEnter={() => setIsCardHovered(true)}
       onMouseLeave={() => setIsCardHovered(false)}
       className={`bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 text-slate-900 relative ${
-        isCardHovered ? 'z-30' : 'z-10'
+        isCardHovered ? 'z-20' : 'z-10'
       }`}
     >
       
